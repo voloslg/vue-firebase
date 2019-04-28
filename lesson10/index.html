@@ -10,22 +10,26 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Events</title>
+  <title>Event Object</title>
 </head>
-
+<style>
+  .canvas {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    background-color: #ddd
+  }
+</style>
 
 <body>
   <div class="container-fluid my-2">
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>I earn {{wage}} pounds per hour</p>
-      <button v-on:click="changeWage(1)">Encrease wage 1 pound</button>
-      <button v-on:click="changeWage(-1)">Decrease wage 1 pound</button>
-      <button v-on:dblclick="changeWage(5)">Encrease wage 5 pound</button>
-      <button v-on:dblclick="changeWage(-5)">Decrease wage 5 pound</button>
-      <!-- Alternate usage of v-on -->
-
-      <button @dblclick="changeWage(-5)">Decrease wage 5 pound</button>
+      <button @click='evetnLog'>Log event info</button>
+      <!-- <button v-on:click='evetnLog'>Log event info</button> -->
+      <div class="canvas" @mousemove='logCoords'>
+        {{coords.x}}, {{coords.y}}
+      </div>
     </div>
   </div>
 
