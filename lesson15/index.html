@@ -20,6 +20,15 @@
     <div class="container-fluid my-2">
       <div id="app">
         <h2>{{ title }}</h2>
+        <ul>
+          <li v-for="item in items">{{ item }}</li>
+        </ul>
+
+        <div v-for="(ninja, index) in ninjas">
+          <p>{{ index }} - {{ ninja.name }}</p>
+          <p>{{ ninja.age }}</p>
+          <p>{{ ninja.belt }}</p>
+        </div>
       </div>
     </div>
 
