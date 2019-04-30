@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    title: "Conditional rendering if",
+    title: "For loop",
     showName: false,
     showAge: true
   },

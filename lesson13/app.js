@@ -1,12 +1,12 @@
 new Vue({
   el: "#app",
   data: {
-    title: "Conditional rendering if",
+    title: "Event modifiers",
     name: "John"
   },
   methods: {
     logMessage() {
-      console.log("Log message");
+      console.log("Log");
     }
   }
 });
